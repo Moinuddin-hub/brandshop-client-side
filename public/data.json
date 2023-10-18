@@ -1,0 +1,39 @@
+[
+    {
+      "id": "1",
+      "image": "https://i.ibb.co/1RPMB5F/sony.jpg",
+      "brandName": "Sony"
+     
+    },
+    {
+      "id": "2",
+      "image": "https://i.ibb.co/2vQBS1C/asus.png",
+      "brandName": "Asus"
+     
+    },
+    {
+      "id": "3",
+      "image": "https://i.ibb.co/ZGyrhPn/sumsung.jpg",
+      "brandName": "Samsung"
+    
+    },
+    {
+      "id": "4",
+      "image": "https://i.ibb.co/z4bY8DL/walton.jpg",
+      "brandName": "Walton"
+   
+    },
+    {
+      "id": "5",
+      "image": "https://i.ibb.co/9HVWNWq/Apple.webp",
+      "brandName": "Apple"
+   
+    },
+    {
+      "id": "6",
+      "image": "https://i.ibb.co/7X4T7L2/Intel.jpg",
+      "brandName": "Intel"
+ 
+    }
+
+  ]
