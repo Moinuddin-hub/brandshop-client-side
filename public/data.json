@@ -2,7 +2,7 @@
     {
       "id": "1",
       "image": "https://i.ibb.co/1RPMB5F/sony.jpg",
-      "brandName": "Sony"
+      "brandName": "sony"
      
     },
     {
@@ -14,7 +14,7 @@
     {
       "id": "3",
       "image": "https://i.ibb.co/ZGyrhPn/sumsung.jpg",
-      "brandName": "Samsung"
+      "brandName": "samsung"
     
     },
     {
@@ -26,7 +26,7 @@
     {
       "id": "5",
       "image": "https://i.ibb.co/9HVWNWq/Apple.webp",
-      "brandName": "Apple"
+      "brandName": "apple"
    
     },
     {

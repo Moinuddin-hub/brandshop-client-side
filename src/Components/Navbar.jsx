@@ -11,7 +11,8 @@ const Navbar = () => {
          <li> <NavLink to="/myCard"  className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "active" : ""   }>My Card</NavLink> </li>
 
-       
+{/* <li> <NavLink to="/showCard"  className={({ isActive, isPending }) =>
+        isPending ? "pending" : isActive ? "active" : ""   }>showCard</NavLink> </li> */}
         
     </>
     return (

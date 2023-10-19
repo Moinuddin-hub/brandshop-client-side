@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Components/Banner';
 import Category from '../Components/Category';
 import { useLoaderData } from 'react-router-dom';
+
 const Home = () => {
     const useCategory=useLoaderData();
     // console.log(useCategory);
@@ -15,7 +16,7 @@ const Home = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
         
         {
-            useCategory.map(category=><Category key={category.id} category={category}></Category>)
+            useCategory.map(category=><Category key={category.id} category={category}> </Category>)
          }
         </div>
         </div>
