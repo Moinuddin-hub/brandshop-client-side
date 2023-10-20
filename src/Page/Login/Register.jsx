@@ -17,12 +17,13 @@ const Register = () => {
          const password=e.target.password.value;
          console.log(name,image,email,password);
 
-                 // validation 
-        if (password.length < 6) {
-            toast.error('Password must be at least 6 characters');
-            return;
+            // validation 
+      
+        if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}$/.test(password)){
+            toast.error('password must be  at least 6 characters and strong password')
+            return
         }
-
+        
         createUser(email,password)
         .then(()=>{
             handleUpdateProfile(name,image)
