@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 
 const AddProduct = () => {
 
-    const handleUpdate=(e)=>{
+    const handleAdd=(e)=>{
         e.preventDefault();
         const form=e.target;
         const name=form.name.value;
@@ -46,10 +46,11 @@ const AddProduct = () => {
     return (
         <div className="w-[1200px] mx-auto bg-[#F4F3F0] p-24">
         <h2 className="text-3xl font-extrabold">Add Product</h2>
-        <form onSubmit={handleUpdate} >
+        <form onSubmit={handleAdd} >
             <div>
             {/* form row */}
             <div className="md:flex md:gap-4 mb-8">
+
             <div className="form-control md:w-1/2">
                 <label className="label">
                 <span className="label-text">Name</span>
@@ -78,11 +79,8 @@ const AddProduct = () => {
                 <span className="label-text">Type</span>
               </label>
            <label className="input-group w-full">
-      
               <input type="text" name="type" placeholder="write name" className="input input-bordered w-full" />
-              
-
-
+            
                </label>
                  </div>
 
@@ -115,7 +113,8 @@ const AddProduct = () => {
               </label>
            <label className="input-group">
           
-             <input type="number" name="rating" placeholder="write your email" className="input input-bordered w-full " />
+             {/* <input type="number" name="rating" placeholder="write your email" className="input input-bordered w-full " /> */}
+             <input type="number" name="rating"  className="input input-bordered " />
                </label>
                  </div>
             </div>

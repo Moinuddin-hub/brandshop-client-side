@@ -3,7 +3,8 @@ import Banner from '../Components/Banner';
 import Category from '../Components/Category';
 import { useLoaderData } from 'react-router-dom';
 import Footer from '../Components/Footer';
-
+import About from '../Components/ExtraSection/About';
+import Contact from '../Components/ExtraSection/Contact';
 const Home = () => {
     const useCategory=useLoaderData();
     // console.log(useCategory);
@@ -20,6 +21,8 @@ const Home = () => {
             useCategory.map(category=><Category key={category.id} category={category}> </Category>)
          }
         </div>
+        <About></About>
+        <Contact></Contact>
         <Footer></Footer>
         </div>
         </>

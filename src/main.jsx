@@ -12,6 +12,7 @@ import Register from './Page/Login/Register.jsx';
 import Login from './Page/Login/Login.jsx';
 import ErrorPage from './Page/ErrorPage.jsx';
 import AuthProvider from './Page/Login/Provider/AuthProvider.jsx';
+import PrivateRoute from './Page/Private/PrivateRoute.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addProduct',
-        element:<AddProduct></AddProduct>,
+        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
         path:'/myCard',

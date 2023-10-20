@@ -7,17 +7,21 @@ export const AuthContext=createContext(null);
 const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
     const[user,setUser]=useState({});
+    const [loading, setLoading] = useState(true)
 //  googleLogin
 const googleLogin=()=>{
+    setLoading(true)
     return signInWithPopup(auth, googleProvider)
 }
 // Register
 const createUser=(email,password)=>{
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password)
 }
 
 // Login
 const singIn=(email,password)=>{
+    setLoading(true)
    return signInWithEmailAndPassword(auth, email, password)
 }
 
@@ -32,7 +36,8 @@ const handleUpdateProfile = (name, photo) => {
 
 useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
-         setUser(user)
+         setUser(user);
+         setLoading(false);
       });
 },[])
 
@@ -42,7 +47,8 @@ useEffect(()=>{
        singIn,
        user,
        logOut,
-       handleUpdateProfile
+       handleUpdateProfile,
+       loading
     }
 
     return (

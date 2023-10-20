@@ -12,13 +12,8 @@ const ShowCard = () => {
    useEffect(()=>{
 
     const findCard=Product.filter((item)=>item.brandName.toLowerCase()==brandName.toLowerCase())
-   
- if(findCard){
-   setCard(findCard)
- }
- else{
-    console.log(setCard(0))
- }
+    setCard(findCard)
+
    },[Product,setCard,brandName])
   
 
