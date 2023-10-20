@@ -1,21 +1,26 @@
 import Card from './Card';
 import { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import MyCard from './MyCard';
+
 const ShowCard = () => {
     const {brandName}=useParams();
 
     const Product=useLoaderData();
     const[card,setCard]=useState([]);
   
+   
    useEffect(()=>{
 
     const findCard=Product.filter((item)=>item.brandName.toLowerCase()==brandName.toLowerCase())
-    setCard(findCard)
-
-    console.log(typeof brandName);
-    console.log(typeof Product[0].brandName);
+   
+ if(findCard){
+   setCard(findCard)
+ }
+ else{
+    console.log(setCard(0))
+ }
    },[Product,setCard,brandName])
+  
 
 
  

@@ -7,13 +7,16 @@ import './index.css'
  import AddProduct from './Page/AddProduct.jsx';
 import ShowCard from './Components/ShowCard.jsx';
 import MyCard from './Components/MyCard.jsx';
-
-
+import UpdateProduct from './Page/UpdateProduct.jsx';
+import Register from './Page/Login/Register.jsx';
+import Login from './Page/Login/Login.jsx';
+import ErrorPage from './Page/ErrorPage.jsx';
+import AuthProvider from './Page/Login/Provider/AuthProvider.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/showCard/:brandName',
@@ -28,21 +31,34 @@ const router = createBrowserRouter([
       {
         path:'/addProduct',
         element:<AddProduct></AddProduct>,
-
       },
       {
         path:'/myCard',
         element:<MyCard></MyCard>,
         loader:()=> fetch('http://localhost:5000/products')
+      },
+      {
+        path:'updateProduct/:_id',
+        element:<UpdateProduct></UpdateProduct>,
+        loader:({params})=> fetch(`http://localhost:5000/products/${params._id}`)  
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
       }
       
-
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+   <AuthProvider>
+   <RouterProvider router={router} />
+   </AuthProvider>
   </React.StrictMode>,
 )
