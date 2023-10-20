@@ -3,9 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const UpdateProduct = () => {
-    const product=useLoaderData();
+    const products=useLoaderData();
    
-    const{_id,brandName,name,photo,price,rating,type}=product;
+    const{_id,brandName,name,photo,price,rating,type}=products;
 //    console.log(product);
     const handleUpdate=(e)=>{
         e.preventDefault();
@@ -16,23 +16,23 @@ const UpdateProduct = () => {
         const price=form.price.value;
         const rating=form.rating.value;
         const photo=form.photo.value;
-        const updateProduct ={name,brandName,type,price,rating,photo};
-       console.log(updateProduct );
+        const updatedProduct ={name,brandName,type,price,rating,photo};
+       console.log(updatedProduct );
 
-       fetch(`http://localhost:5000/products/${_id}`, {
+       fetch(`http://localhost:5000/products/${products._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(updateProduct ),
+        body: JSON.stringify(updatedProduct ),
       })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          if(data. insertedId){
+          if(data.modifiedCount>0){
               Swal.fire({
                   title: 'success',
-                  text: 'User added successfully',
+                  text: 'Product added successfully',
                   icon: 'success',
                   confirmButtonText: 'Cool'
                 })
@@ -42,7 +42,7 @@ const UpdateProduct = () => {
     }
     return (
         <div className="w-[1200px] mx-auto bg-[#F4F3F0] p-24">
-        <h2 className="text-3xl font-extrabold"> update Product</h2>
+        <h2 className="text-3xl font-extrabold text-center"> Update Product</h2>
         <form onSubmit={handleUpdate}  >
             <div>
             {/* form row */}
@@ -121,7 +121,7 @@ const UpdateProduct = () => {
                  </div>
                  </div>
      
-               <input type="submit" value="Add button"  className="btn btn-block bg-black text-white"/>
+               <input type="submit" value="Update button"  className="btn btn-block bg-black text-white"/>
         </form>
     </div>
     );
