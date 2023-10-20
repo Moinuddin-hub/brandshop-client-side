@@ -13,10 +13,7 @@ const Navbar = () => {
 
          <li> <NavLink to="/myCard"  className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "active" : ""   }>My Card</NavLink> </li>
-
- {/* <li> <NavLink to="/updateProduct"  className={({ isActive, isPending }) =>
-        isPending ? "pending" : isActive ? "active" : ""   }>Update</NavLink> </li>  */}
-        
+     
     </>
     return (
         <div className="w-[1200px] mx-auto">

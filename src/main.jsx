@@ -13,6 +13,7 @@ import Login from './Page/Login/Login.jsx';
 import ErrorPage from './Page/ErrorPage.jsx';
 import AuthProvider from './Page/Login/Provider/AuthProvider.jsx';
 import PrivateRoute from './Page/Private/PrivateRoute.jsx';
+import Details from './Page/Details/Details.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+          path:'details/:_id',
+          element:<PrivateRoute><Details></Details></PrivateRoute>,
+          loader:({params})=> fetch(`http://localhost:5000/products/${params._id}`)  
       }
       
     ]
