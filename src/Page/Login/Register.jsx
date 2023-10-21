@@ -29,7 +29,7 @@ const Register = () => {
             handleUpdateProfile(name,image)
             .then(()=>{
                 toast.success('User create successfully');
-                navigate('/home')
+                navigate('/login')
             })
         })
         .catch((error)=>{
@@ -80,7 +80,7 @@ const Register = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
         <label className="label">
          Have an account? <Link to="/login" className="label-text-alt link link-hover">Please Login</Link>
