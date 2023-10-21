@@ -46,7 +46,7 @@ const AddProduct = () => {
     return (
         <div className="w-[1200px] mx-auto bg-[#F4F3F0] p-24">
         <h2 className="text-3xl font-extrabold">Add Product</h2>
-        <form onSubmit={handleAdd} >
+        <form onSubmit={handleAdd} className='w-80 lg:w-full' >
             <div>
             {/* form row */}
             <div className="md:flex md:gap-4 mb-8">
@@ -67,7 +67,7 @@ const AddProduct = () => {
               </label>
            <label className="input-group">
           
-             <input type="text" name="brand" placeholder="write your quantity"  className="input input-bordered w-full " />
+             <input type="text" name="brand" placeholder="write your brandName"  className="input input-bordered lg:w-full " />
                </label>
                  </div>
             </div>
@@ -79,7 +79,7 @@ const AddProduct = () => {
                 <span className="label-text">Type</span>
               </label>
            <label className="input-group w-full">
-              <input type="text" name="type" placeholder="write name" className="input input-bordered w-full" />
+              <input type="text" name="type" placeholder="write type" className="input input-bordered w-full" />
             
                </label>
                  </div>
@@ -90,7 +90,7 @@ const AddProduct = () => {
               </label>
            <label className="input-group">
           
-             <input type="number" name="price"  placeholder="write your email" className="input input-bordered w-full " />
+             <input type="number" name="price"  placeholder="write price" className="input input-bordered lg:w-full " />
                </label>
                  </div>
             </div>
@@ -114,7 +114,8 @@ const AddProduct = () => {
            <label className="input-group">
           
              {/* <input type="number" name="rating" placeholder="write your email" className="input input-bordered w-full " /> */}
-             <input type="number" name="rating"  className="input input-bordered " />
+             <input type="number" name="rating"  className="input input-bordered lg:w-full " />
+             {/* <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" /> */}
                </label>
                  </div>
             </div>
@@ -131,7 +132,7 @@ const AddProduct = () => {
                  </div>
                  </div>
      
-               <input type="submit" value="Add button"  className="btn btn-block bg-black text-white"/>
+               <input type="submit" value="Add button"  className="btn btn-block mt-4 bg-black text-white"/>
         </form>
     </div>
     );

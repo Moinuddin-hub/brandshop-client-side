@@ -21,12 +21,15 @@ const ShowCard = () => {
  
     return (
         <>
-        <div className='grid grid-cols-3'>
-          {
-          card.map(data=> <Card key={data._id} data={data} Product={Product}></Card>)
-          }
-   
-        </div>
+        
+       {card.length===0?(<h1>ERROR</h1>):(
+           <div className='grid grid-cols-1 gap-4 lg:grid-cols-3'>
+           {
+           card.map(data=> <Card key={data._id} data={data} Product={Product}></Card>)
+           }
+    
+         </div>
+       )}
      
         </>
     );

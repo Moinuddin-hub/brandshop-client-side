@@ -5,7 +5,7 @@ const Card = ({data}) => {
     const{_id,brandName,description,name,photo,price,rating,type}=data;
 
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-96   bg-teal-500 shadow-xl">
              <h2 className="text-center font-bold text-2xl">{type}</h2>
   <figure><img src={photo} className='w-72 h-48' /></figure>
   <div className="card-body">
@@ -16,7 +16,14 @@ const Card = ({data}) => {
         </div>
         <div className="">
         <h2 className="card-title">Price:${price}</h2>
-     <h2 className="card-title">Rating:{rating}</h2>
+     {/* <h2 className="card-title">Rating:{rating}</h2> */}
+     <div className="rating rating-xs">
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" checked />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+</div>
         </div>
       
     </div>
