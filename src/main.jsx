@@ -14,6 +14,7 @@ import ErrorPage from './Page/ErrorPage.jsx';
 import AuthProvider from './Page/Login/Provider/AuthProvider.jsx';
 import PrivateRoute from './Page/Private/PrivateRoute.jsx';
 import Details from './Page/Details/Details.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,10 +36,11 @@ const router = createBrowserRouter([
         element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
-        path:'/myCard',
+        path:'/myCard/:_id',
         element:<MyCard></MyCard>,
-        loader:()=> fetch('http://localhost:5000/products')
+        loader:({params})=> fetch(`http://localhost:5000/products/${params._id}`)
       },
+   
       {
         path:'updateProduct/:_id',
         element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
@@ -56,8 +58,8 @@ const router = createBrowserRouter([
           path:'details/:_id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
           loader:({params})=> fetch(`http://localhost:5000/products/${params._id}`)  
-      }
-      
+      },
+
     ]
   },
 ]);

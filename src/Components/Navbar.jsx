@@ -13,11 +13,13 @@ const Navbar = () => {
 
          <li> <NavLink to="/myCard"  className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "active" : ""   }>My Card</NavLink> </li>
+        
+     
      
     </>
     return (
-        <div className="w-[1200px]  bg-red-300 mx-auto">
-            <div className="navbar bg-base-100 ">
+        <div className="w-[1200px]   mx-auto">
+            <div className="navbar  ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,8 +30,9 @@ const Navbar = () => {
 
       </ul>
     </div>
-    <div className="w-20">
+    <div className="w-28 flex">
     <img src="https://i.ibb.co/zFLdx7Z/logo.jpg" alt="" className="" />
+   
     </div>
 
   </div>

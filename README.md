@@ -1,8 +1,13 @@
-# React + Vite
+                                       write about your project 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+.My project name is Technology and Electronics.Home page show my brandName and Brand Picter.Contact form and banner section.
 
-Currently, two official plugins are available:
+.when click the card then go to product route.and customer show card related brand.
+and click the details page .you will show details
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+.If you want to update product then you will go to update from.But if you have log in then you will update product.
+
+.If you want to add product then go to add product page.
+
+.You show all product and click delete button and delete product
+

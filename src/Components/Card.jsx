@@ -30,10 +30,11 @@ const Card = ({data}) => {
     <p>{description}</p>
     <div className="card-actions justify-end">
       <Link to={`/updateProduct/${_id}`}><button  className="btn btn-primary">update</button></Link>
-     <Link to={`/details/${_id}`} > <button className="btn btn-primary">Details</button></Link>
+      <Link to={`/details/${_id}`}><button className="btn btn-primary">Details</button> </Link>
     </div>
+    
   </div>
-</div>
+  </div>
     );
 };
 
