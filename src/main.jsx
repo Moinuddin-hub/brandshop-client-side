@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         path:'/showCard/:brandName',
         element:<ShowCard></ShowCard>,
-         loader:()=> fetch('http://localhost:5000/products')
+         loader:()=> fetch('https://assignment-10-backend-3anoe8046-moinuddin-hubs-projects.vercel.app/products')
       },    
       {
         path:'/home',
@@ -37,14 +37,14 @@ const router = createBrowserRouter([
       },
       {
         path:'/myCard/:_id',
-        element:<MyCard></MyCard>,
-        loader:({params})=> fetch(`http://localhost:5000/products/${params._id}`)
+        element:<PrivateRoute><MyCard></MyCard></PrivateRoute>,
+        loader:({params})=> fetch(`https://assignment-10-backend-3anoe8046-moinuddin-hubs-projects.vercel.app/products/${params._id}`)
       },
    
       {
         path:'updateProduct/:_id',
         element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/products/${params._id}`)  
+        loader:({params})=> fetch(`https://assignment-10-backend-3anoe8046-moinuddin-hubs-projects.vercel.app/products/${params._id}`)  
       },
       {
         path:'/register',
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       {
           path:'details/:_id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
-          loader:({params})=> fetch(`http://localhost:5000/products/${params._id}`)  
+          loader:({params})=> fetch(`https://assignment-10-backend-3anoe8046-moinuddin-hubs-projects.vercel.app/products/${params._id}`)  
       },
 
     ]

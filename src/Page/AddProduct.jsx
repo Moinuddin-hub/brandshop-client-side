@@ -22,7 +22,7 @@ const AddProduct = () => {
 
     // using fetch 
     
-    fetch("http://localhost:5000/products", {
+    fetch("https://assignment-10-backend-3anoe8046-moinuddin-hubs-projects.vercel.app/products", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -19,7 +19,7 @@ const UpdateProduct = () => {
         const updatedProduct ={name,brandName,type,price,rating,photo};
        console.log(updatedProduct );
 
-       fetch(`http://localhost:5000/products/${products._id}`, {
+       fetch(`https://assignment-10-backend-3anoe8046-moinuddin-hubs-projects.vercel.app/products/${products._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

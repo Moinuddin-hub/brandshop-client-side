@@ -22,7 +22,7 @@ const MyCard = () => {
           }).then((result) => {
             if (result.isConfirmed) {
       
-              fetch(`http://localhost:5000/products/${Card._id}`,{
+              fetch(`https://assignment-10-backend-3anoe8046-moinuddin-hubs-projects.vercel.app/products/${Card._id}`,{
                 method: "DELETE",
               })
               .then(res=>res.json())
